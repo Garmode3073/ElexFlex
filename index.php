@@ -32,7 +32,9 @@ $conn = Connect();
     </header>
     <main>
       <!-- Main Body -->
-      Main Body
+      <?php
+      include './firstpage.php';
+      ?>
       <!-- Main Body -->
     </main>
     <footer>
