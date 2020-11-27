@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <?php 
-session_start(); 
-echo '<script>alert("Password re-entered is different")</script>';
+session_start();
 require 'db_connection.php';
 $conn = Connect();
 ?>
