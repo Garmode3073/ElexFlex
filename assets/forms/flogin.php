@@ -15,11 +15,22 @@ $count=mysqli_num_rows($res);
 
 if($count==0){
     echo '<script>alert("Enterted Username or Password is wrong")</script>';
-    header("Location: ../../myaccount.php");
 }
 else{
-    $_SESSION['type'] = 'Customer';
-    $_SESSION['user'] = $_POST["uname"];
-    header("Location: ../../myaccount.php");
+    if(isset($_POST['admin']) && $_POST['admin']=='admin'){
+        if($row['user_type']=='Mgr'){
+            $_SESSION['type'] = 'Seller';
+            $_SESSION['user'] = $_POST["uname"];
+            echo '<script>alert("Welcome Boss")</script>';
+        }
+        else{
+            echo '<script>alert("You do not have access to this area")</script>';
+        }
+    }
+    else{
+        $_SESSION['type'] = 'Customer';
+        $_SESSION['user'] = $_POST["uname"];
+    }
 }
+header("Location: ../../myaccount.php");
 ?>

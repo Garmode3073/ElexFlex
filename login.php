@@ -151,10 +151,10 @@ span.psw {
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
-       
+      <label>
+        <input type="checkbox" name="admin" value = 'admin'> Login as administrator
+      </label>
       <button type="submit">Login</button>
-      <button>Login as Administrator</button>
- 
       <label>
         <input type="checkbox" name="remember"> Remember me
       </label>

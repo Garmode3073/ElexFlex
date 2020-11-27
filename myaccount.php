@@ -42,6 +42,7 @@
       }
       elseif(isset($_SESSION['user'])&& $_SESSION['type']=='Seller'){
       ?>
+      <a href="./logout.php"><button>Sign Out</button></a>
       <?php
       }
       else{

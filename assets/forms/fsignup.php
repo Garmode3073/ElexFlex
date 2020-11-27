@@ -15,7 +15,7 @@ if ($mysqli -> connect_errno) {
 
 
 
-if($password!=$passwordrep){
+if($_POST["psw"]!=$_POST["psw-repeat"]){
     echo '<script>alert("Password re-entered is different")</script>';
     header("Location: ../../myaccount.php");
 }
