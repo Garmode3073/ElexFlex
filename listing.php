@@ -13,7 +13,7 @@ $query = 'SELECT * from design where sub_category="'.$_GET['sub-category'].'"';
 ?>
 
 
-<html>
+
     <head>
         <title><?php echo $_GET['sub-category'].' | ElexFlex' ?></title>
         <style>
@@ -31,11 +31,12 @@ $query = 'SELECT * from design where sub_category="'.$_GET['sub-category'].'"';
                 transition: 0.4s;
             }
             .container{
-                background-color: #ffffff;
+                background-color: red;
                 border: 1px solid #555555;
                 border-radius: 10px;
                 padding: 1% 1%;
-                height: 280px;
+                min-height: 280px;
+
                 margin: 1%;
             }
             .prod-name{
@@ -50,6 +51,7 @@ $query = 'SELECT * from design where sub_category="'.$_GET['sub-category'].'"';
                 padding: 10px 10px 10px 10px;
                 border-radius: 10px;
                 border-color: indigo;
+                background-color: white;
 
             }
             .prodinfo:hover {
@@ -60,7 +62,7 @@ $query = 'SELECT * from design where sub_category="'.$_GET['sub-category'].'"';
                 border: 3px solid black;
                 padding: 10px 10px 10px 10px;
                 width: 100%;
-                height: 280px;
+                min-height: 280px;
                 border-radius: 10px;
                 border-color: indigo;
 
@@ -72,13 +74,14 @@ $query = 'SELECT * from design where sub_category="'.$_GET['sub-category'].'"';
             }
 
             .imgplace {
+            	background-color: white;
                 min-width: 300px;
+                min-height: 200px;
                 border: 3px solid black;
                 padding: 10px 10px 10px 10px;
                 border-radius: 10px;
                 border-color: indigo;
             }
-
 
         </style>
     </head>
@@ -101,8 +104,9 @@ $query = 'SELECT * from design where sub_category="'.$_GET['sub-category'].'"';
             <h2>Name: <?php echo $prod_row['name'];?></h2>
             <br>
             Price: <?php echo $prod_row['price'];?></td></tr>
-        </div>
+       
             </table>
+        </div>
         <?php 
                             }
                         }

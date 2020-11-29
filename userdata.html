@@ -1,81 +1,97 @@
+
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/css/userdata.css">
+	</head>
 <html>
-  <head>
-      <title> User Data </title>
-      <link rel="stylesheet" type="text/css" href="assets/css/userdata.css"
-  </head>
-  <body>
-    <div id="namediv"><br>ENTER YOUR NAME<br>
-           <input type="Fname"
-                  class="form-control"
-                  id="inputfname"
-                  placeholder="First Name">
+       <body>
+              <form>
+<div class="maincont">
+<div class="container" id="usernamediv"><br>ENTER a USERNAME<br><br>
+       <input type="username" class="form-control" id="inputfname" placeholder="UserName">
+</div><br>
+<div class="container" id="namediv"><br>ENTER YOUR NAME<br><br>
+       <input type="Fname" 
+              class="form-control" 
+              id="inputfname" 
+              placeholder="First Name">
+       
+       <input type="Mname" 
+              class="form-control" 
+              id="inputmname" 
+              placeholder="Middle Name">
+       
+       <input type="Lname" 
+              class="form-control" 
+              id="inputlname" 
+              placeholder="Last Name">
+</div><br>
 
-           <input type="Mname"
-                  class="form-control"
-                  id="inputmname"
-                  placeholder="Middle Name">
+<div id="contactdiv" class="container"><br>CONTACT DETAILS AND DATE OF BIRTH<br><br>
+       <input type="date"
+              class="form-control"
+              id="inputdate"
+              placeholder="Date of Birth">
 
-           <input type="Lname"
-                  class="form-control"
-                  id="inputlname"
-                  placeholder="Last Name">
-    </div><br>
+       <input type="text"
+              class="form-control"
+              id="inputnumber"
+              placeholder="mobile number">
 
-    <div id="contactdiv"><br>CONTACT DETAILS AND DATE OF BIRTH<br>
-           <input type="date"
-                  class="form-control"
-                  id="inputdate"
-                  placeholder="Date of Birth">
+       <input type="email"
+              class="form-control"
+              id="inputemail"
+              placeholder="email">
+</div>
+<br>
 
-           <input type="text"
-                  class="form-control"
-                  id="inputnumber"
-                  placeholder="mobile number">
+<div id="addressdiv" class="container"><br>ENTER YOUR ADDRESS DETAILS<br><br>
 
-           <input type="email"
-                  class="form-control"
-                  id="inputemail"
-                  placeholder="email">
-    </div>
-    <br>
+       <input type="street" 
+              class="form-control" 
+              id="inputStreet" 
+              placeholder="Street/Landmark">
+       
+       <input type="city" 
+              class="form-control" 
+              id="inputCity" 
+              placeholder="City">
+       
+       <input type="state" 
+              class="form-control" 
+              id="inputState" 
+              placeholder="State">
 
-    <div id="addressdiv"><br>ENTER YOUR ADDRESS DETAILS<br>
+       <input type="zip" 
+              class="form-control" 
+              id="inputZip" 
+              placeholder="Zip">
+       
+       <input type="country" 
+              class="form-control" 
+              id="inputCountry" 
+              placeholder="Country">
 
-           <input type="street"
-                  class="form-control"
-                  id="inputStreet"
-                  placeholder="Street/Landmark">
+</div><br>
+<div id="qualifdiv" class="container">      <br>ENTER QUALIFICATIONS<br><br>
 
-           <input type="city"
-                  class="form-control"
-                  id="inputCity"
-                  placeholder="City">
-
-           <input type="state"
-                  class="form-control"
-                  id="inputState"
-                  placeholder="State">
-    </div>
-    <div id="addressdiv">
-           <input type="zip"
-                  class="form-control"
-                  id="inputZip"
-                  placeholder="Zip">
-
-           <input type="country"
-                  class="form-control"
-                  id="inputCountry"
-                  placeholder="Country">
-
-    </div><br>
-    <div id="qualifdiv">      <br>ENTER QUALIFICATIONS<br>
-
-           <input type="text"
-                  class="form-control"
-                  id="inputqualification"
-                  placeholder="Qualification">
-
-
-    </div>
-  </body>
+       <input type="text"
+              class="form-control"
+              id="inputqualification"
+              placeholder="Qualification">
+       
+       
+</div>
+<div class="submitdetails">
+       <input type="button"
+              class="form-submit"
+              id="submitdetails"
+              value="CONFIRM">
+       <i class="fa fa-arrow-right"></i>
+              
+              
+              
+</div>
+</div>
+</form>
+</body>
 </html>

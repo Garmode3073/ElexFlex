@@ -1,22 +1,28 @@
 body {
-	background-color: #99a3a4;
+	background-image: url("https://previews.123rf.com/images/tashatuvango/tashatuvango1603/tashatuvango160302250/54368250-e-shop-closeup-landing-page-in-doodle-design-style-on-laptop-screen-on-background-of-comfortable-wor.jpg");
+	height: auto;
+}
+option {
+	column-gap: 2px;
+}
+select{
+	column-gap: 2px;
+	color: #e74c3c;
+	border-radius: 5px;
 }
 .container1 {
     
   
-  background-color: #99a3a4;
+  
   text-align: center;
   margin: auto;
   height: 100%;
-  
-  
-  
   font-family: comic sans ms;
 }
 .inner1 {
 	margin-top: 50px;
 	font-size: 50px;
-	color:white;
+	color:rgba(118, 201, 240, 0.411);
 	text-shadow: 3px 3px #000000;
 }
 .inner2 {
@@ -28,12 +34,25 @@ body {
 }
 .inner3 {
 	text-shadow: 1px 1px #000000;
-	background-color: #e74c3c;
+	background-color: #99a3a4;
+	
 
 }
 #category{
-	color: #c6faff;
-	align-content: center;
+	color: #ffffff;
+	background-color: transparent red;
+	background-blend-mode: multiply;
+	font-size: xx-large;
+
+	opacity: 100%;
+	text-align-last: center;
+}
+#category:hover{
+	box-shadow:
+    0 0 10px 10px #fff,  /* inner white */
+    0 0 10px 10px #fff, /* middle magenta */
+    0 0 10px 10px #0ff; /* outer cyan */
+
 }
 
 .image1 {
@@ -41,82 +60,71 @@ body {
 	max-height: 90%;
 	margin: 0 auto;
 	box-shadow: 5px 5px;
-}
-.image1 {
-	max-width: 90%;
-	max-height: 90%;
-	margin: 0 auto;
-}
-.image1 {
-	max-width: 90%;
-	max-height: 90%;
-	margin: 0 auto;
-}
-.image1 {
-	max-width: 90%;
-	max-height: 90%;
-	margin: 0 auto;
+	opacity: 100%;
 }
 .category1 {
-	box-shadow: 10px 10px black;
+	
 	padding-top: 20px;
 	background-color: #e74c3c;
 	border: 5px;
-	height: 350px;
+	height: 300px;
 	width: 250px;
-	min-width: 350px;
+	min-width: 300px;
 	margin-left: 100px;
 	margin-top: 20px;
 	float: left;
 }
 .category2 {
-    box-shadow: 10px 10px black;
+    
 	padding-top: 20px;
 	background-color: #e74c3c;
 	border: 5px;
-	height: 350px;
+	height: 300px;
 	width: 250px;
-	min-width: 350px;
-	margin-left: 200px;
+	min-width: 300px;
+	margin-left: 100px;
 	margin-top: 20px;
 	float: left;
 }
 .category3 {
-	box-shadow: 10px 10px black;
+	
 	padding-top: 20px;
 	background-color: #e74c3c;
 	border: 5px;
-	height: 350px;
+	height: 300px;
 	width: 250px;
-	min-width: 350px;
+	min-width: 300px;
 	margin-left: 100px;
 	margin-top: 20px;
 	float: left;
 }
 .category4 {
-	box-shadow: 10px 10px black;
 	padding-top: 20px;
 	background-color: #e74c3c;
 	border: 5px;
-	height: 350px;
+	height: 300px;
 	width: 250px;
-	min-width: 350px;
-	margin-left: 200px;
+	min-width: 300px;
+	margin-left: 100px;
 	margin-top: 20px;
 	float: left;
 	
 }
 
 a {
-	color: aliceblue;
+	color:rgba(118, 201, 240, 0.411);;
 	text-decoration: none;
+	text-shadow: 2px 3px #000000;
+}
+table {
+	text-align: center;
 }
 
 .extrainfo {
 	margin-top: 50px;
 	font-size: xx-large;
 	float: right;
-	color: white;
+	
 }
 
 select {
