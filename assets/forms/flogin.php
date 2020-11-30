@@ -18,7 +18,7 @@ if($count==0){
 }
 else{
     if(isset($_POST['admin']) && $_POST['admin']=='admin'){
-        if($row['user_type']=='Mgr'){
+        if($row['user_type']=='MGR'){
             $_SESSION['type'] = 'Seller';
             $_SESSION['user'] = $_POST["uname"];
             echo '<script>alert("Welcome Boss")</script>';
