@@ -1,6 +1,6 @@
 <?php
-include("connconf.php")
-
+include("connconf.php");
+session_start();
 
 ?>
 
@@ -14,10 +14,6 @@ include("connconf.php")
 <body>
     <form action="useraddress.php" method="POST">
         <div class="maincont">
-            <div class="container" id="usernamediv"><br>ENTER a USERNAME again<br><br>
-                <input type="username" class="form-control" id="username" placeholder="UserName" name="username">
-            </div><br>
-
             <div id="addressdiv" class="container"><br>ENTER YOUR ADDRESS DETAILS<br><br>
 
                 <input type="text" class="form-control" id="inputstreet" placeholder="Street" name="inputstreet">
@@ -26,16 +22,14 @@ include("connconf.php")
 
                 <input type="text" class="form-control" id="landmark" placeholder="Landmark" name="landmark">
 
-                <input type="text" class="form-control" id="inputCity" placeholder="City" name="inputCity">
+                <input type="text" class="form-control" id="inputCity" placeholder="City" name="inputCity" required>
 
-                <input type="text" class="form-control" id="inputdistrict" placeholder="District" name="inputdistrict">
+                <input type="text" class="form-control" id="inputdistrict" placeholder="District" name="inputdistrict" required>
 
-                <input type="text" class="form-control" id="inputdistate" placeholder="State" name="inputstate">
-
-
-                <input type="text" class="form-control" id="inputpincode" placeholder="Zip" name="inputpincode">
+                <input type="text" class="form-control" id="inputdistate" placeholder="State" name="inputstate" required>
 
 
+               
             </div><br>
 
             <div class="submitdetails1">
@@ -43,6 +37,30 @@ include("connconf.php")
             </div>
         </div>
     </form>
+    <?php
+    $mysqli = new mysqli("localhost","root","","elexflex");
+
+    if ($mysqli -> connect_errno) {
+      echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+      exit();
+    }
+    $valid = "SELECT * FROM user_add WHERE username = '".$_SESSION["user"]."';";
+    $res = $mysqli->query($valid);
+
+    while($row= mysqli_fetch_array($res))
+    {
+    echo "
+    <div class = 'addresses'>
+    Street:  ".$row['local_street']."<br>
+    Home:   ".$row['home']."<br>
+    Landmark:   ".$row['landmark']."<br>
+    City:    ".$row['city']."<br>
+    District:    ".$row['dist']."<br>
+    State:    ".$row['state']."<br><br><br>
+    </div>
+    ";
+    }
+    ?>
 </body>
 
 <?php
@@ -54,10 +72,15 @@ if (isset($_POST['submitdetails1'])) {
     $inputcity = $_POST['inputCity'];
     $inputdistrict = $_POST['inputdistrict'];
     $inputstate = $_POST['inputstate'];
-    $inputpincode = $_POST['inputpincode'];
 
-    $res = mysqli_query($connection,"INSERT INTO user_add  VALUES ('$username','$home','$inputstreet','$inputlandmark','$inputcity','$inputdistrict','$inputstate','$inputpincode')");
-    
+    $res = "INSERT INTO user_add(username, home, local_street, landmark, city, dist, state) VALUES ('".$_SESSION['user']."','".$_POST['inputhome']."','".$_POST['inputstreet']."','".$_POST['landmark']."','".$_POST['inputcity']."','".$_POST['inputdistrict']."','".$_POST['inputstate']."')";
+    if ($mysqli->query($res) === TRUE) {
+          header("Location: ./myaccount.php");
+        } else {
+          echo "Error: " , $res , "<br>" , $mysqli->error;
+
+          //"Error: " , '$sql' . "<br>" , '$mysqli->error' ---to find error
+        }
 }
 ?>
 

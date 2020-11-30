@@ -41,8 +41,9 @@
 }
 #submitdetails {
   margin-left: 480px;
-  min-height: 5%;
+  min-height: 10%;
   min-width: auto;
+  padding: 3px;
   color: rgb(21, 122, 51);
   box-shadow: 5px 5px;
   
@@ -60,4 +61,8 @@
   
   #inputqualification {
     width: 80%;
+  }
+
+  .address{
+    margin-left:20%;
   }
