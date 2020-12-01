@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+
+session_start();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,7 +57,7 @@
     <br>
     <h4>Add an image in the given path and then wite the image name with extention in the given field</h4>
     </label><br>
-    <input type="text" name="name" class='catname' value='./files/img/category/'>
+    <input type="text" name="img" class='catname' value='./files/img/category/'>
     <br><br><br>
     <input type="submit" value="Submit" name='submit'>
     </form>
@@ -69,7 +73,6 @@
 </body>
 <?php
 if(isset($_POST['submit'])){
-    session_start();
 
 $mysqli = new mysqli("localhost","root","","elexflex");
 
@@ -77,7 +80,13 @@ if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
   exit();
 }
-$sql = "INSERT INTO user_acc (username, password, user_type, act_date, act_time) VALUES ('".$_POST["email"]."', '".$_POST["psw"]."', 'Customer', CURDATE(), CURTIME());";
+$sql = "INSERT INTO category (name, img) VALUES ('".$_POST["name"]."', '".$_POST["img"]."');";
+if ($mysqli->query($sql) === TRUE) {
+    header("Location: ./myaccount.php");
+  } else {
+    echo "<script>Error: " , $res , "<br>" , $mysqli->error, "<script>";
+    // "Error: " , '$sql' . "<br>" , '$mysqli->error' ---to find error
+  }
 }
 ?>
 </html>
