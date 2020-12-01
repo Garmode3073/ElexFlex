@@ -93,7 +93,7 @@
         <li class = 'myad'><a href="./nadmin.php">Add New Admin</a></li>
         <li class = 'myad'><a href="">Add new Product</a></li>
         <li class = 'myad'><a href="./ncat.php">Add new category</a></li>
-        <li class = 'myad'><a href="">Add new Sub-category</a></li>
+        <li class = 'myad'><a href="./nsubcat.php">Add new Sub-category</a></li>
         <li class = 'myad'><a href="">Add items</a></li>
       </ul>
       <?php
