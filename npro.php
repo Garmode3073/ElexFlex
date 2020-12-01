@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElexFlex | New Sub Category</title>
+    <title>ElexFlex | New Product</title>
     <link rel="stylesheet" href="assets/css/head.css">
     <link rel="stylesheet" href="assets/css/foot.css">
     <title>ELEXFLEX | My Account</title>
@@ -46,11 +46,11 @@ session_start();
     </header>
     <main>
       <!-- Main Body -->
-      <h1>ADD A NEW SUB CATEGORY</h1>
+      <h1>ADD A NEW PRODUCT</h1>
       <br>
     <form method="post">
     <label for="name">
-    Sub Category Name
+    Product Name
     </label><br>
     <input type="text" name="name" class='catname'><br><br><br>
     <label for="image">
@@ -58,21 +58,38 @@ session_start();
     <br>
     <h4>Add an image in the given path and then wite the image name with extention in the given field</h4>
     </label><br>
-    <input type="text" name="img" class='catname' value='./files/img/sub-category/'>
+    <input type="text" name="img" class='catname' value='./files/img/product/'>
     <br>
-    <label for="category">
-    Category
+    <label for="price">
+    Price
+    </label><br>
+    <input type="text" name="price" class='catname'><br><br><br>
+    <label for="subcategory">
+    Sub Category
     </label><br>
     <br>
-  <select name = 'category'>
-    <option disabled selected>-- Select Category --</option>
+  <select name = 'subcategory'>
+    <option disabled selected>-- Select Sub Category --</option>
     <?php
-        $records = mysqli_query($conn, "SELECT * From category");  // Use select query here 
+        $records = mysqli_query($conn, "SELECT * From sub_category");  // Use select query here 
 
         while($data = mysqli_fetch_array($records))
         {
             echo $data['name'];
             echo "<option value='". $data['name'] ."'>" .$data['name'] ."</option>";  // displaying data in option menu
+        }	
+    ?>  
+  </select>
+    <br><br>
+    <select name = 'brand'>
+    <option disabled selected>-- Select Brand --</option>
+    <?php
+        $records = mysqli_query($conn, "SELECT * From brand");  // Use select query here 
+
+        while($data = mysqli_fetch_array($records))
+        {
+            echo $data['name'];
+            echo "<option value='". $data['brand_id'] ."'>" .$data['name'] ."</option>";  // displaying data in option menu
         }	
     ?>  
   </select>
@@ -98,7 +115,7 @@ if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
   exit();
 }
-$sql = "INSERT INTO sub_category (name, img, category) VALUES ('".$_POST["name"]."', '".$_POST["img"]."', '".$_POST["category"]."');";
+$sql = "INSERT INTO product (name, img, sub_category, price, brand_id) VALUES ('".$_POST["name"]."', '".$_POST["img"]."', '".$_POST["subcategory"]."', '".$_POST["pricing"]."', '".$_POST["brand"]."');";
 if ($mysqli->query($sql) === TRUE) {
     header("Location: ./myaccount.php");
   } else {

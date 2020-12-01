@@ -10,6 +10,6 @@ if($result){
     }
 }
 else{
-    echo 'Connection failed';
+    echo 'Connection failed'
 }
 ?>

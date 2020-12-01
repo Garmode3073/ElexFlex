@@ -143,7 +143,7 @@ span.psw {
   <span onclick="document.getElementById('id02').style.display='none'; document.getElementById('id01').style.display='none'" class="close" title="Close signup">&times;</span>
   <form class="signup-content" action="./assets/forms/fsignup.php" method = POST>
     <div class="container">
-    <img src="./assets/img/e.png" alt="icon" class="icon">
+<img src="./assets/img/e.png" alt="icon" class="icon">
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
       <hr>
