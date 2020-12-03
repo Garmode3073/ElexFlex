@@ -108,6 +108,7 @@ background: #E74C3C;
 border-radius: 13px;
 box-shadow: 0px 0px 70px 10px #555555;
   padding: 20 px;
+  color: white;
 }
 
 span.psw {
@@ -142,8 +143,8 @@ span.psw {
 <div id="id02" class="signup">
   <span onclick="document.getElementById('id02').style.display='none'; document.getElementById('id01').style.display='none'" class="close" title="Close signup">&times;</span>
   <form class="signup-content" action="./assets/forms/fsignup.php" method = POST>
-    <div class="container">
-<img src="./assets/img/e.png" alt="icon" class="icon">
+    <div class="container" style="background: url(https://images.squarespace-cdn.com/content/v1/5d0a42589ea6e200018e2d7a/1562355561464-CGJXY0R4JOOG4C4RVVT3/ke17ZwdGBToddI8pDm48kOyctPanBqSdf7WQMpY1FsRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzdDaU_bF7Ds5W9lU7yP8WpaBCM76uVnxdYD9Ka9eZj3NBMAuNC_ujA-eHPkEsGI2A/SBS-animation_600x600_062419.gif?format=1000w) no-repeat; background-size: 100% 100%; ">
+<center><img src="./assets/img/e.png" alt="icon" class="icon"></center>
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
       <hr>

@@ -32,8 +32,8 @@ $conn = Connect();
     </header>
     <main>
       <!-- Main Body -->
-     <?php
-      include './firstpage.php';
+      <?php
+      include 'firstpage.php';
       ?>
       <!-- Main Body -->
     </main>

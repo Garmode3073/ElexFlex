@@ -1,5 +1,5 @@
 <?php
-include("paymentconf.php")
+include("connconf.php")
 
 ?>
 
@@ -196,11 +196,9 @@ color: red;}
 
 
         </div>
-        <table class="table1"><tr>
-          <td><div class="required"><label id="verifydoc" for="verifydoc"><b>Upload PAN or PASSPORT</b></label>
-            <input type="file" id="myfile" name="myfile"></div>
+        
           </td><td>
-        <input type="submit" value="proceed" class="proceedbtn" name="proceedbtn">
+       <center> <input type="submit" value="proceed" class="proceedbtn" name="proceedbtn"></center>
       </td>
     </tr></table>
       </form>
