@@ -1,7 +1,16 @@
 <?php 
   require 'connect.php';
-  session_start();
+
+  if(isset($_POST['fname'])){
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $mob_no = $_POST['mob-no'];
+  $complaint = $_POST['complaint'];
   
+  $insert_query = 'INSERT INTO complaint ( fname, lname, mob_no, complaint) VALUES("'.$fname.'","'.$lname.'","'.$mob_no.'","'.$complaint.'");';
+  $result = mysqli_query($connection, $insert_query);
+  echo $result;
+  }
 ?>
 
 <!DOCTYPE html>
@@ -156,13 +165,4 @@ input[type=submit]:hover {
      <!--Footer-->
     </footer>
   </body>
-  <?php
-  if(isset($_POST['submit'])){
-  
-  $insert_query = 'INSERT INTO complaint ( fname, lname, mob_no, complaint) VALUES("'.$_POST['fname'].'","'.$_POST['lname'].'","'.$_POST['mob-no'].'","'.$_POST['complaint'].'");';
-  $result = mysqli_query($connection, $insert_query);
-  echo "<script><br><br><br></script>";
-  echo $result;
-  }
-  ?>
 </html>

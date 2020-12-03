@@ -32,7 +32,7 @@ $query = 'SELECT * from ';
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ElexFlex | Add Item</title>
+        <title>Add ITEM</title>
         <link rel="stylesheet" type="text/css" href="assets\css\addItem.css">
         <link rel="stylesheet" href="assets/css/head.css">
         <link rel="stylesheet" href="assets/css/foot.css">

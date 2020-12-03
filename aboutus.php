@@ -20,6 +20,10 @@ $conn = Connect();
         overflow-x: hidden; 
         overflow-y: auto;
       }
+      .mainmain{
+          margin-left: 25%;
+          margin-top: 10%;
+      }
     </style>
   </head>
   <body>
@@ -32,9 +36,9 @@ $conn = Connect();
     </header>
     <main>
       <!-- Main Body -->
-     <?php
-      include './firstpage.php';
-      ?>
+      <div class="mainmain">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/A_VMF57YgQE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
       <!-- Main Body -->
     </main>
     <footer>

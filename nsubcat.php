@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElexFlex | New Sub Category</title>
+    <title>ElexFlex | New Category</title>
     <link rel="stylesheet" href="assets/css/head.css">
     <link rel="stylesheet" href="assets/css/foot.css">
     <title>ELEXFLEX | My Account</title>
